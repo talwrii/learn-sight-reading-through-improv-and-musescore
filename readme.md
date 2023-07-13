@@ -49,12 +49,19 @@ i. You only seem to be able to add notes on one stave at a time, and you seem ne
 ii. Switching off the midi controller seems to make muse score forget the its current midi controller. Additionally, sometimes muse score will pick the wrong controller if two devices are attached.
 You can, however, fix this by going into preferences > I/O and selecting the controller.
 
+I think the freeward tool, [MidiPipe](http://www.subtlesoft.square7.net/MidiPipe.html) might be useful here in that it can map a single midi instrument into two instruments, one for the top stave one for the bottom using the midi input, keyboard split and midi output tools.
 
 ## Problems
+This applies mostly to a mac machine. 
 
 I am occassionally experiencing situations where muse score stops accepting midi input. This [blog post discusses this](https://www.cmuse.org/musescore-midi-input-not-working/).
 
 Some suggestions from this include:
 
 * Resetting muse score to factory settings through the help menu.
-* Channels may be wrong. A midi input device send on different channels and an instrument listens on a particular channel. There seems to be [no gui option to change channel](https://musescore.org/en/node/138681) but you can manual unzip and the `mscz` file and edit the `mscx` file to change or see the channel that an instrument on the stave expects. You may need to ensure that your keyboard is on channel 0.
+* Channels may be wrong. A midi input device send on different channels and an instrument listens on a particular channel. If found a post saying there was  [no gui option to change channel](https://musescore.org/en/node/138681) but you could manually unzip and the `mscz` file and edit the `mscx` file to change or see the channel that an instrument on the stave expects. You may need to ensure that your keyboard is on channel 0.
+* [This post](https://musescore.org/en/node/3230010) says that from the mixer you can assign channels to different instruments.
+
+You can use [midi monitor](https://www.snoize.com/midimonitor/) as a lightweight tool to print out midi events. Alternatively your DAW (such as reaper) may have tools to print midi events.
+
+You may need to chang your [midi settings](https://support.apple.com/en-gb/guide/audio-midi-setup/ams875bae1e0/mac).
