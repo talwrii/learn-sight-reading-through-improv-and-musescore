@@ -2,7 +2,7 @@
 
 I mostly learned to play guitar, or that guitar which I play, by improvising and "messing around with a guitar". This approach comes with its advantage and disadvantages. An advantage is that it was something I was willing to spend a reasonable amount of time doing - and learned something doing. The disadvantage was that I don't really know how to music.
 
-As a new project I am trying to fix this... but I've decided to take a similar approach to learning to read music as I did to playing: messing around writing music.There is promise that this may be an interactive experience with an interesting piece of software: muse score. 
+As a new project I am trying to fix this, but I've decided to take a similar approach to learning to read music as I did to playing: messing around writing music.There is promise that this may be an interactive experience with an interesting piece of software: muse score. 
 
 [Musescore](https://musescore.org/en/4.0) is an open source piece of software that lets you transcribe sheet music and play back what are you doing.
 
@@ -36,8 +36,7 @@ Keybindings I created:
 * Toggle loop playback
 
 ### Using a midi controller
-I am using a midi controller with a piano for input. This makes life slightly more fun. One issue is that in my current set up I still have to change manually enter the rhythm.
-For the rhythm I am using the "double not duration and half duration features".
+I am using a midi controller from an electronic piano for input This makes life slightly more fun. One issue is that in my current set up I still have to change notes manually enter the rhythm. For the rhythm I am using the "double not duration and half duration features" to aoid controls that are too fiddly.
 
 ### The power of inadvertant training over focused practice
 Many people would encouraged focused practice of music. I'm sure this has its advantage. But my approach here is one of quantity over quantity. 
@@ -49,3 +48,13 @@ For this a second screen is good for you
 i. You only seem to be able to add notes on one stave at a time, and you seem need to manually select the stave to enter notes on. Again my Rii keyboard helps here because it has a little keyboard. It would be great if there was a keybinding to switch stave.
 ii. Switching off the midi controller seems to make muse score forget the its current midi controller. Additionally, sometimes muse score will pick the wrong controller if two devices are attached.
 You can, however, fix this by going into preferences > I/O and selecting the controller.
+
+
+## Problems
+
+I am occassionally experiencing situations where muse score stops accepting midi input. This [blog post discusses this](https://www.cmuse.org/musescore-midi-input-not-working/).
+
+Some suggestions from this include:
+
+* Resetting muse score to factory settings through the help menu.
+* Channels may be wrong. A midi input device send on different channels and an instrument listens on a particular channel. There seems to be [no gui option to change channel](https://musescore.org/en/node/138681) but you can manual unzip and the `mscz` file and edit the `mscx` file to change or see the channel that an instrument on the stave expects. You may need to ensure that your keyboard is on channel 0.
